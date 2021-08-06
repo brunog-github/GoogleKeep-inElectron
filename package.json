@@ -1,0 +1,28 @@
+{
+  "name": "googlekeep",
+  "version": "1.0.0",
+  "description": "Aplicativo Google Keep para linux.",
+  "main": "src/main.js",
+  "author": "Bruno Gonçalves Pereira <bruno.g.p897@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.1.8",
+    "electron-builder": "^22.11.7"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.bruno.googlekeepapp",
+    "linux": {
+      "target": [
+        "deb",
+        "snap",
+        "rpm"
+      ],
+      "category": "Utility"
+    }
+  }
+}
